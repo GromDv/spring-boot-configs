@@ -5,11 +5,12 @@ spring:
   output.ansi.enabled: ALWAYS
   application:
     name: phoneBookMs
-  openfeign:
-    client:
-      config:
-        phoneBookMs:
-          url: http://localhost:8765/pb/list
+  cloud:
+    openfeign:
+      client:
+        config:
+          phoneBookMs:
+            url: http://localhost:8765/pb/list
   config:
     enabled: true
     import: optional:configserver:http://localhost:8888
