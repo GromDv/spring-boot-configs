@@ -4,3 +4,6 @@ server:
 spring:
   application:
     name: Microservice-phoneBook
+    config:
+    enabled: true
+    import: optional:configserver:http://localhost:8888
