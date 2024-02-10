@@ -7,3 +7,8 @@ spring:
     config:
     enabled: true
     import: optional:configserver:http://localhost:8888
+  openfeign:
+  client:
+    config:
+      phoneBookMs:
+        url: http://localhost:8083/pb/list
