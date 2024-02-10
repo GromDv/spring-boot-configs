@@ -2,13 +2,15 @@ server:
   port: 8083
 
 spring:
+  output.ansi.enabled: ALWAYS
   application:
-    name: Microservice-phoneBook
-    config:
-    enabled: true
-    import: optional:configserver:http://localhost:8888
+    name: phoneBookMs
   openfeign:
     client:
       config:
         phoneBookMs:
-          url: http://localhost:8083/pb/list
+          url: http://localhost:8765/pb/list
+  config:
+    enabled: true
+    import: optional:configserver:http://localhost:8888
+ 
