@@ -1,9 +1,8 @@
 server:
   port: 8087
+  
 spring:
   output.ansi.enabled: ALWAYS
-  application:
-    name: taskManager-ms
   datasource:
     url: jdbc:postgresql://localhost:5435/tasksBase
     username: postgres
